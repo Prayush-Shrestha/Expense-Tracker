@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +7,19 @@
   <title>Expense Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <div class="container">
+
     <h1>Expense Tracker</h1>
+    <p class="subtitle">Keep track of your daily expenses</p>
 
     <div class="form">
-      <input type="text" id="name" placeholder="Expense Name">
+      <input type="text" id="name" placeholder="Expense name">
+
       <input type="number" id="amount" placeholder="Amount">
+
       <select id="category">
         <option>Food</option>
         <option>Travel</option>
@@ -20,17 +27,27 @@
         <option>Bills</option>
         <option>Other</option>
       </select>
+
       <button id="addBtn">Add Expense</button>
     </div>
 
     <div class="search">
-      <input type="text" id="search" placeholder="Search Expense">
+      <input type="text" id="search" placeholder="Search expenses...">
     </div>
 
-    <h2>Total: $<span id="total">0</span></h2>
+    <div class="total-box">
+      <p>Total Expenses</p>
+      <h2>NPR<span id="total">0</span></h2>
+    </div>
+
+    <h3>Expense List</h3>
+
     <ul id="expenseList"></ul>
+
   </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>
+

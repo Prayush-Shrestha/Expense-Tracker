@@ -1,29 +1,40 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  padding: 40px;
+  background: #f5f7fb;
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
 .container {
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
   background: white;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  color: #222;
+  margin-bottom: 6px;
 }
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* Form */
 
 .form {
   display: grid;
@@ -32,23 +43,34 @@ h1 {
 }
 
 input,
-select,
-button {
+select {
   padding: 12px;
-  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #0d9488;
 }
 
 button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
   background: #0d9488;
   color: white;
-  border: none;
+  font-size: 15px;
   cursor: pointer;
-  border-radius: 4px;
 }
 
 button:hover {
   background: #0f766e;
 }
+
+/* Search */
 
 .search {
   margin: 20px 0;
@@ -56,6 +78,33 @@ button:hover {
 
 .search input {
   width: 100%;
+}
+
+/* Total */
+
+.total-box {
+  background: #f0fdfa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.total-box p {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.total-box h2 {
+  color: #0d9488;
+  font-size: 30px;
+}
+
+/* List */
+
+h3 {
+  margin-bottom: 12px;
+  color: #333;
 }
 
 ul {
@@ -68,25 +117,43 @@ li {
   align-items: center;
   padding: 15px;
   margin-bottom: 10px;
-  background: #eee;
-  border-radius: 5px;
+  background: #f8f9fa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+li b {
+  color: #222;
+}
+
+li div {
+  line-height: 1.6;
+  color: #666;
 }
 
 .delete {
-  background: #f97316;
-  color: white;
-  border: none;
+  background: #ef4444;
   padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 4px;
 }
 
 .delete:hover {
-  background: #ea580c;
+  background: #dc2626;
 }
 
+/* Mobile */
+
 @media (max-width: 700px) {
+
   .form {
     grid-template-columns: 1fr;
   }
+
+  .container {
+    padding: 20px;
+  }
+
+  li {
+    gap: 10px;
+  }
 }
+
