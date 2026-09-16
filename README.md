@@ -1,5 +1,5 @@
 
-﻿# Expense Tracker (Frontend)
+﻿## Expense Tracker (Frontend)
 
 This directory contains the frontend implementation of the Expense Tracker application, built using core web technologies.
 
