@@ -33,9 +33,13 @@ addBtn.addEventListener("click", () => {
   amountInput.value = "";
 });
 
-searchInput.addEventListener("keyup", () => {
-  const keyword = searchInput.value.toLowerCase();
-  const filtered = expenses.filter(e => e.name.toLowerCase().includes(keyword));
+searchInput.addEventListener("input", () => {
+  const keyword = searchInput.value.toLowerCase().trim();
+
+  const filtered = expenses.filter(e =>
+    e.name.toLowerCase().includes(keyword)
+  );
+
   renderList(filtered);
 });
 
@@ -47,13 +51,17 @@ function renderList(list) {
     sum += exp.amount;
 
     const li = document.createElement("li");
+
     li.innerHTML = `
       <div>
         <b>${exp.name}</b><br>
         ${exp.category}<br>
         $${exp.amount}
       </div>
-      <button class="delete" onclick="removeExpense(${exp.id})">Delete</button>
+
+      <button class="delete" onclick="removeExpense(${exp.id})">
+        Delete
+      </button>
     `;
 
     expenseList.appendChild(li);
